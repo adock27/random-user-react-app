@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, NavLink, Route, Routes } from "react-router-dom";
 
 import CandidatosLista from '../componentes/CandidatosLista'
 import CandidatosSeleccionados from '../componentes/CandidatosSeleccionados'
@@ -10,6 +10,10 @@ const MisRutas = () => {
 
     const seleccionados = useSelector(state => state.misCandidatos.seleccionados)
 
+
+    const isActive = (e) => {
+
+    }
 
     return (
         <>
@@ -39,9 +43,7 @@ const MisRutas = () => {
                                     <li><a className="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                            </li>
+
                         </ul>
                         <form className="d-flex">
                             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
@@ -55,20 +57,15 @@ const MisRutas = () => {
 
             <div className="nav-scroller bg-body shadow-sm">
                 <nav className="nav" aria-label="Secondary navigation">
-                    <Link to="/">  <a className="nav-link active" aria-current="page">Dashboard</a> </Link>
-                    <Link to="/seleccionados">
-                        <a className="nav-link" href="#">
-                            Seleccionados
-                            <span className="badge text-bg-light rounded-pill align-text-bottom">{seleccionados.length}</span>
-                        </a>
-                    </Link>
-                    <a className="nav-link" href="#">Explore</a>
-                    <a className="nav-link" href="#">Suggestions</a>
-                    <a className="nav-link" href="#">Link</a>
-                    <a className="nav-link" href="#">Link</a>
-                    <a className="nav-link" href="#">Link</a>
-                    <a className="nav-link" href="#">Link</a>
-                    <a className="nav-link" href="#">Link</a>
+                    <NavLink to="/"
+                        className={({ isActive }) => isActive ? ' nav-link active fw-bold' : ' nav-link  text-dark'}>
+                        Dashboard
+                    </NavLink>
+                    <NavLink to="/seleccionados"
+                        className={({ isActive }) => isActive ? ' nav-link active fw-bold' : ' nav-link  text-dark'}>
+                        Seleccionados
+                        <span className="badge text-bg-light rounded-pill align-text-bottom">{seleccionados.length}</span>
+                    </NavLink>
                 </nav>
             </div>
 

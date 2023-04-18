@@ -27,8 +27,8 @@ const CandidatosLista = () => {
   return (
     <div className='container'>
       <div className="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm bg-dark">
-        {/* <img className="me-3" src="../" alt="" width="48" height="38"/> */}
-        <i class="bi bi-person-lines-fill fs-1 me-3 "></i>
+       
+        <i className="bi bi-person-lines-fill fs-1 me-3 "></i>
         <div className="lh-1">
           <h1 className="h6 text-white lh-1">Candidatos</h1>
           <small>lista de candidatos</small>
@@ -51,9 +51,6 @@ const CandidatosLista = () => {
           </div>
         ))}
 
-
-
-        {/* {} */}
       </div>
 
 
