@@ -18,9 +18,9 @@ const MisRutas = () => {
     return (
         <>
 
-            <nav className="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+            <nav className="navbar navbar-expand-lg   navbar-dark bg-dark">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">Navbar</a>
+                    <a className="navbar-brand" href="#">Random user app</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -55,7 +55,7 @@ const MisRutas = () => {
 
 
 
-            <div className="nav-scroller bg-body shadow-sm">
+            <div className="nav-scroller bg-body shadow-sm sticky-top">
                 <nav className="nav" aria-label="Secondary navigation">
                     <NavLink to="/"
                         className={({ isActive }) => isActive ? ' nav-link active fw-bold' : ' nav-link  text-dark'}>

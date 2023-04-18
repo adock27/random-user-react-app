@@ -8,8 +8,8 @@ const CandidatosSeleccionados = () => {
 
   return (
     <div className='container'>
-        <div className="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm bg-dark">
-        {/* <img className="me-3" src="../" alt="" width="48" height="38"/> */}
+        <div className="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm bg-dark rounded-3">
+        
         <i className="bi bi-person-fill-check fs-1 me-3 "></i>
         <div className="lh-1">
           <h1 className="h6 text-white lh-1">Candidatos Seleccionados</h1>
@@ -19,7 +19,7 @@ const CandidatosSeleccionados = () => {
       <hr />
       <div className="row">
         {seleccionados.map((seleccionado, key) =>
-          <div className="col col-md-6 col-lg-3 col-xl-2" key={key}>
+          <div className="col-6 col-md-6 col-lg-3 col-xl-2" key={key}>
             <Seleccionado
               candidato={seleccionado}
             />
